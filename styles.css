@@ -1267,7 +1267,7 @@ img {
         clear: both;
     }
     @media (max-width: 768px) {
-    .flex.items-center.gap-3 > a:first-child {
+    .hero-book-only {
         display: none;
     }
 }
