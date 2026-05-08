@@ -1257,7 +1257,6 @@ img {
         min-height: 100vh;
         padding-bottom: 2rem;
     }
-    
     /* 7. If there is a specific element for "AUTHENTIC RESTAURANT IN", adjust it */
     /* This targets any paragraph or span that might contain that text */
     .hero p:first-of-type,
@@ -1270,5 +1269,9 @@ img {
     .hero-book-only {
         display: none;
     }
-}
+    /* Force navbar Book a Table button to always show */
+.navbar a[href="dine-with-us.html"] {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
