@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Doppio Zero Cafe – Authentic Italian in Dublin</title>
+    <meta name="description"
+        content="Explore the full menu at Doppio Zero Cafe in Dublin. Fresh pasta, pizza, panini, desserts and Italian wines made with authentic ingredients.">
+    <meta name="keywords" content="Italian restaurant Dublin, Doppio Zero Cafe menu, Italian food Dublin, pasta pizza Dublin, panini Dublin, authentic Italian menu">
+    <meta name="author" content="Doppio Zero Cafe">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.doppiozerocafe.ie/our-menu.html">
+    <meta property="og:title" content="Menu | Doppio Zero Cafe – Authentic Italian in Dublin">
+    <meta property="og:description" content="Explore the full menu at Doppio Zero Cafe in Dublin. Fresh pasta, pizza, panini, desserts and Italian wines made with authentic ingredients.">
+    <meta property="og:image" content="https://www.doppiozerocafe.ie/assets/Our-menu/our-menu-hero-photo.webp">
+    <meta property="og:locale" content="en_IE">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Menu | Doppio Zero Cafe – Authentic Italian in Dublin">
+    <meta name="twitter:description" content="Explore the full menu at Doppio Zero Cafe in Dublin. Fresh pasta, pizza, panini, desserts and Italian wines made with authentic ingredients.">
+    <meta name="twitter:image" content="https://www.doppiozerocafe.ie/assets/Our-menu/our-menu-hero-photo.webp">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.doppiozerocafe.ie/our-menu.html">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Doppio Zero Cafe",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4A Abbey Street Upper",
+        "addressLocality": "Dublin",
+        "addressCountry": "IE"
+      },
+      "telephone": "+353876621135",
+      "servesCuisine": "Italian",
+      "url": "https://www.doppiozerocafe.ie"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Be+Vietnam+Pro:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+    <style>
+        /* CSS Variables (source of truth for brand colors) */
+        :root {
+            --primary: #B22222;
+            --primary-hover: #921c1c;
+            --accent: #F5A623;
+            --secondary: #1F6F4A;
+            --on-surface: #1C1A18;
+            --background: #F7F3EE;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Body & Typography using CSS variables */
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: var(--background);
+            color: var(--on-surface);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Noto Serif', serif;
+            color: var(--primary);
+        }
+
+        /* Navbar scroll effect classes */
+        .navbar-custom {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-transparent {
+            background-color: transparent !important;
+            backdrop-filter: none !important;
+            border-bottom-color: transparent !important;
+            box-shadow: none !important;
+        }
+
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.9) !important;
+            backdrop-filter: blur(12px) !important;
+            border-bottom: 1px solid #f1f5f9 !important;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+        }
+
+        /* Custom scrollbar using CSS variables */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-hover);
+        }
+
+        /* Nav hover effects using CSS variables */
+        .nav-transparent .nav-link:hover,
+        .nav-scrolled .nav-link:hover {
+            background-color: var(--accent) !important;
+            color: var(--on-surface) !important;
+            border-radius: 6px;
+        }
+
+        /* Italian Visual Framing System */
+        .img-italian-frame {
+            position: relative;
+            overflow: hidden;
+            display: block;
+        }
+        .img-italian-frame.absolute {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Italian Identity Strip -->
+    <div class="tricolor-strip">
+        <div class="tricolor-green"></div>
+        <div class="tricolor-white"></div>
+        <div class="tricolor-red"></div>
+    </div>
+
+    <!-- Navigation Bar (identical to homepage) -->
+    <nav class="fixed top-0 w-full z-50 border-b navbar-custom nav-transparent">
+        <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="inline-flex items-center">
+                <img src="assets/homepage/logo-doppiozerocafe.png" alt="Doppio Zero Cafe Restaurant in Dublin"
+                    class="h-12 w-auto object-contain">
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html"
+                    class="font-serif text-sm uppercase tracking-wide font-medium text-[#1C1A18] hover:text-[#B22222] transition-colors">Home</a>
+                <a href="our-menu.html"
+                    class="font-serif text-sm uppercase tracking-wide font-medium text-[#B22222] transition-colors border-b-2 border-[#B22222]">Our
+                    Menu</a>
+                <a href="gallery.html"
+                    class="font-serif text-sm uppercase tracking-wide font-medium text-[#1C1A18] hover:text-[#B22222] transition-colors">Gallery</a>
+                <a href="our-story.html"
+                    class="font-serif text-sm uppercase tracking-wide font-medium text-[#1C1A18] hover:text-[#B22222] transition-colors">Our
+                    Story</a>
+                <a href="dine-with-us.html"
+                    class="font-serif text-sm uppercase tracking-wide font-medium text-[#1C1A18] hover:text-[#B22222] transition-colors">Dine
+                    with us</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="dine-with-us.html"
+                    class="bg-[#B22222] text-white text-sm font-bold uppercase tracking-wide py-3 px-8 rounded-full transition-all hover:bg-[#921c1c] shadow-md">
+                    Book a Table
+                </a>
+    
+                    </svg>
+                    
+                </a>
+            </div>
+        <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-[#1C1A18] p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-t border-stone-200 shadow-lg">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="index.html" class="font-serif text-sm uppercase tracking-wide font-medium text-[#1C1A18] hover:text-[#B22222] transition-colors py-2">Home</a>
+                <a href="our-menu.html" class="font-serif text-sm uppercase tracking-wide font-medium text-[#B22222] transition-colors py-2 border-b-2 border-[#B22222]">Our Menu</a>
+                <a href="gallery.html" class="font-serif text-sm uppercase tracking-wide font-medium text-[#1C1A18] hover:text-[#B22222] transition-colors py-2">Gallery</a>
+                <a href="our-story.html" class="font-serif text-sm uppercase tracking-wide font-medium text-[#1C1A18] hover:text-[#B22222] transition-colors py-2">Our Story</a>
+                <a href="dine-with-us.html" class="font-serif text-sm uppercase tracking-wide font-medium text-[#1C1A18] hover:text-[#B22222] transition-colors py-2">Dine with us</a>
+                <div class="flex flex-col space-y-3 pt-4 border-t border-stone-200">
+                    <a href="dine-with-us.html" class="bg-[#B22222] text-white text-sm font-bold uppercase tracking-wide py-3 px-6 rounded-full text-center transition-all hover:bg-[#921c1c]">Book a Table</a>
+                    <a href="https://wa.me/353876621135?text=Hello%2C%20I%20would%20like%20to%20make%20a%20booking%20at%20Doppio%20Zero%20Cafe" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white text-sm font-bold uppercase tracking-wide py-3 px-6 rounded-full text-center transition-all hover:bg-green-600 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative h-[80vh] min-h-[650px] flex items-center mt-16 bg-black overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <img src="assets/Our-menu/our-menu-hero-photo.webp" alt="Doppio Zero Cafe Menu" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="italian-flag-strip">
+                <div class="flag-green"></div>
+                <div class="flag-white"></div>
+                <div class="flag-red"></div>
+            </div>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full">
+            <div class="max-w-3xl text-left">
+                <h1 class="text-white font-serif text-5xl md:text-7xl font-bold tracking-tight leading-tight mb-6">
+                    <span style="color:#F5A623;">DOPPIO</span> Zero 
+                </h1>
+                
+                <p class="text-[#F5A623] font-serif text-xl md:text-2xl mt-8">
+                    <i>Real Italian Restaurant in Dublin, IE </i>
+                </p>
+                
+                <p class="text-white/90 text-lg md:text-xl mt-4 mb-10 max-w-lg leading-relaxed">
+                    Tasty Italian dishes crafted with passion, fresh ingredients, and the true taste of Italy.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="./menu-demo.html" target="_blank" class="bg-[#B22222] text-white text-sm font-bold uppercase tracking-wide py-3 px-8 rounded-full transition-all hover:bg-[#901b1b] shadow-md">
+                        FOOD MENU
+                    </a>
+                    <a href="#" class="bg-[#B22222] text-white text-sm font-bold uppercase tracking-wide py-3 px-8 rounded-full transition-all hover:bg-[#901b1b] shadow-md">
+                        WINE MENU
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 👇 PASTE THE TITLE HERE 👇 -->
+<h2 class="font-serif text-3xl md:text-4xl font-semibold text-center mt-16 mb-1">
+  <span class="text-[#B22222]">🍽 OUR MENU</span>
+  <span class="text-[#1b1c1c]"> | A Taste of Italy in Every Bite </span>
+</h2>
+    <!-- Menu Content -->
+    <main class="max-w-7xl mx-auto px-6 py-16">
+        <!-- TODAY'S SPECIALS -->
+        <div class="mb-16 p-8 bg-white rounded-2xl border border-stone-200 shadow-sm">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="text-3xl">🧑‍🍳</span>
+                <h2 class="font-serif text-4xl font-bold text-[#B22222]">Today’s Specials</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="space-y-6">
+                    <div class="flex justify-between items-baseline">
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-lg">Chicche di Patate alla Sorrentina</h3>
+                            <p class="text-[#5a413d] text-sm">Potatoes gnocchi with tomatoes sauce and fresh burrata cheese. 🍅🧀</p>
+                        </div>
+                        <span class="font-bold ml-4">€18.90</span>
+                    </div>
+                    <div class="flex justify-between items-baseline">
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-lg">Pansoti alla Ligure</h3>
+                            <p class="text-[#5a413d] text-sm">Traditional fresh pasta filling with ricotta cheese and spinach with Parmesan cream. 🍃🧀</p>
+                        </div>
+                        <span class="font-bold ml-4">€22.50</span>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex justify-between items-baseline">
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-lg">Tiramisù Special</h3>
+                            <p class="text-[#5a413d] text-sm">Classic tiramisù with a hint of amaretto and cocoa dusting. 🥥🍰</p>
+                        </div>
+                        <span class="font-bold ml-4">€7.50</span>
+                    </div>
+                    <div class="flex justify-between items-baseline">
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-lg">Piadina + Aperol Spritz</h3>
+                            <p class="text-[#5a413d] text-sm">Classic Piadina Romagnola with Prosciutto Crudo (Ham) and Rucola, drizzled with Extra Virgin Olive Oil. 🥬🍖🍹</p>
+                        </div>
+                        <span class="font-bold ml-4">€18</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- End of Today's Specials -->
+</div>
+
+<!-- Starters section begins -->
+
+            <!-- STARTERS -->
+            <div class="mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="assets/Our-menu/tagliera-mista.webp" alt="Tagliera mista – Italian cured meats and cheeses" class="w-24 h-24 object-cover border-2 border-stone-200 transition-transform duration-300 hover:scale-110 hover:shadow-lg">
+                        <div class="italian-flag-strip">
+                            <div class="flag-green"></div>
+                            <div class="flag-white"></div>
+                            <div class="flag-red"></div>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="font-serif text-3xl font-semibold text-[#B22222] border-b-2 border-[#B22222]/20 pb-2 mb-2">Starters</h2>
+                        <p class="text-[#1C1A18]/80 text-sm leading-relaxed">Begin your meal with our classic Italian antipasti – from creamy burrata to savory cured meats, all served with freshly baked bread.</p>
+                    </div>
+                </div>
+                <ul class="space-y-3">
+                    <li class="flex justify-between items-baseline">
+                        <span class="font-semibold">Burrata & Pomodori D'Attirino <span class="inline-block bg-[#1F6F4A] text-white text-xs px-2 py-0.5 rounded-full ml-2">🌿 Veg</span></span>
+                        <span>€12.50</span>
+                    </li>
+                    <li class="flex justify-between items-baseline">
+                        <span class="font-semibold">Crostino Aglio Olio Mozzarella</span>
+                        <span>€8.90</span>
+                    </li>
+                    <li class="flex justify-between items-baseline">
+                        <span class="font-semibold">Olive Taggiasche & Taralli</span>
+                        <span>€6.50</span>
+                    </li>
+                    <li class="flex justify-between items-baseline">
+                        <span class="font-semibold">Tagliere Misto (Italian meat & cheese)</span>
+                        <span>€14.90</span>
+                    </li>
+                    <li class="flex justify-between items-baseline">
+                        <span class="font-semibold">Bruschetta</span>
+                        <span>€7.50</span>
+                    </li>
+                    <li class="flex justify-between items-baseline">
+                        <span class="font-semibold">Soup of the Day</span>
+                        <span>€8.50</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- PANINI (served with soup or salad) -->
+            <div class="mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="assets/Our-menu/panini.webp" alt="Grilled panini with Italian fillings" class="w-24 h-24 object-cover border-2 border-stone-200 transition-transform duration-300 hover:scale-110 hover:shadow-lg">
+                        <div class="italian-flag-strip">
+                            <div class="flag-green"></div>
+                            <div class="flag-white"></div>
+                            <div class="flag-red"></div>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="font-serif text-3xl font-semibold text-[#B22222] border-b-2 border-[#B22222]/20 pb-2 mb-2">Panini</h2>
+                        <p class="text-[#1C1A18]/80 text-sm leading-relaxed">Pressed to perfection, our panini are filled with high‑quality Italian ingredients and served with soup or salad.</p>
+                    </div>
+                </div>
+                <p class="text-sm italic mb-3">Served with soup or salad · All €14.90</p>
+                <ul class="space-y-2">
+                    <li>• Batterini tomato, bufala mozzarella & fresh basil</li>
+                    <li>• Roast ham, scamorza cheese & mushrooms</li>
+                    <li>• Parma ham D.O.P., mozzarella & rocket salad</li>
+                    <li>• Grilled chicken, pesto, chilli, cheese & rocket</li>
+                    <li>• Ventricina salami, scamorza & rocket</li>
+                    <li>• Parma ham D.O.P., bufala mozzarella, rocket</li>
+                    <li>• Mortadella, pistacchio pesto, burrata & rocket</li>
+                </ul>
+            </div>
+
+            <!-- PINZA ROMANA (oval pizzas) -->
+            <div class="mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="assets/Our-menu/pinza-romana.webp" alt="Pinza Romana – oval‑shaped crispy pizza" class="w-24 h-24 object-cover border-2 border-[#8e706c] transition-transform duration-300 hover:scale-110 hover:shadow-lg">
+                        <div class="italian-flag-strip">
+                            <div class="flag-green"></div>
+                            <div class="flag-white"></div>
+                            <div class="flag-red"></div>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="font-serif text-3xl font-semibold text-[#820202] border-b-2 border-[#e2bfb9] pb-2 mb-2">Pinza Romana</h2>
+                        <p class="text-[#5a413d] text-sm leading-relaxed">Experience Rome’s famous oval pizza with a light, crispy crust and premium toppings.</p>
+                    </div>
+                </div>
+                <p class="text-sm italic mb-3">Oval shape, thin & crispy</p>
+                <ul class="space-y-3">
+                    <li class="flex justify-between items-baseline">
+                        <div class="flex-1 pr-4">
+                            <span class="font-semibold">Buffala</span> – Tomato, bufala mozzarella & fresh basil
+                            <span class="inline-block bg-[#1F6F4A] text-white text-xs px-2 py-0.5 rounded-full ml-2">🌾 GF</span>
+                        </div>
+                        <span class="whitespace-nowrap">€13.90</span>
+                    </li>
+                    <li class="flex justify-between items-baseline">
+                        <div class="flex-1 pr-4">
+                            <span class="font-semibold">Picciante</span> – Salame piccante, tomato & mozzarella
+                            <span class="inline-block bg-[#1F6F4A] text-white text-xs px-2 py-0.5 rounded-full ml-2">🌾 GF</span>
+                            <span class="inline-block bg-[#1F6F4A] text-white text-xs px-2 py-0.5 rounded-full ml-2">🌶️ Spicy</span>
+                        </div>
+                        <span class="whitespace-nowrap">€14.90</span>
+                    </li>
+                    <li class="flex justify-between items-baseline">
+                        <div class="flex-1 pr-4">
+                            <span class="font-semibold">Modena</span> – Roast ham, mushrooms, tomato & mozzarella
+                            <span class="inline-block bg-[#1F6F4A] text-white text-xs px-2 py-0.5 rounded-full ml-2">🌾 GF</span>
+                        </div>
+                        <span class="whitespace-nowrap">€14.90</span>
+                    </li>
+                    <li class="flex justify-between items-baseline">
+                        <div class="flex-1 pr-4">
+                            <span class="font-semibold">Vegetariana</span> – Tomato, mushrooms, olives, aubergine, mozzarella & basil
+                            <span class="inline-block bg-[#1F6F4A] text-white text-xs px-2 py-0.5 rounded-full ml-2">🌾 GF</span>
+                            <span class="inline-block bg-[#1F6F4A] text-white text-xs px-2 py-0.5 rounded-full ml-2">🌿 Veg</span>
+                        </div>
+                        <span class="whitespace-nowrap">€13.90</span>
+                    </li>
+                    <li class="flex justify-between items-baseline">
+                        <div class="flex-1 pr-4">
+                            <span class="font-semibold">Mortadella</span> – Burrata, pistacchio & rocket
+                            <span class="inline-block bg-[#1F6F4A] text-white text-xs px-2 py-0.5 rounded-full ml-2">🌾 GF</span>
+                        </div>
+                        <span class="whitespace-nowrap">€15.90</span>
+                    </li>
+                </ul>
+                <p class="text-sm mt-3 italic">Daily specials available on the board</p>
+            </div>
+
+            <!-- PASTA -->
+            <div class="mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="assets/Our-menu/tagliatelle-alla-norcina.webp" alt="Tagliatelle alla Norcina – pasta with sausage and truffle" class="w-24 h-24 object-cover border-2 border-stone-200 transition-transform duration-300 hover:scale-110 hover:shadow-lg">
+                        <div class="italian-flag-strip">
+                            <div class="flag-green"></div>
+                            <div class="flag-white"></div>
+                            <div class="flag-red"></div>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="font-serif text-3xl font-semibold text-[#B22222] border-b-2 border-[#B22222]/20 pb-2 mb-2">Pasta</h2>
+                        <p class="text-[#1C1A18]/80 text-sm leading-relaxed">Homemade pasta dishes made daily, featuring rich sauces and the finest local and imported ingredients.</p>
+                    </div>
+                </div>
+                <ul class="space-y-3">
+                    <li class="flex justify-between items-baseline">
+                        <div class="flex-1 pr-4">
+                            <span class="font-semibold">Linguine alla Burrata Pistacchio</span> – pistacchio pesto, burrata
+                            <span class="inline-block bg-[#1F6F4A] text-white text-xs px-2 py-0.5 rounded-full ml-2">🌾 GF</span>
+                            <span class="inline-block bg-[#1F6F4A] text-white text-xs px-2 py-0.5 rounded-full ml-2">🥜 Nuts</span>
+                        </div>
+                        <span class="whitespace-nowrap">€16.90</span>
+                    </li>
+                    <li class="flex justify-between items-baseline">
+                        <div class="flex-1 pr-4">
+                            <span class="font-semibold">Cacio e Pepe</span> – Locatelli sauce, homemade salsa pomodoro
+                            <span class="inline-block bg-[#1F6F4A] text-white text-xs px-2 py-0.5 rounded-full ml-2">🌾 GF</span>
+                        </div>
+                        <span class="whitespace-nowrap">€14.90</span>
+                    </li>
+                    <li class="flex justify-between items-baseline">
+                        <div class="flex-1 pr-4">
+                            <span class="font-semibold">Ravioli Carbonara</span> – stuffed with pecorino & guanciale, creamy sauce
+                            <span class="inline-block bg-[#1F6F4A] text-white text-xs px-2 py-0.5 rounded-full ml-2">🌾 GF</span>
+                        </div>
+                        <span class="whitespace-nowrap">€15.90</span>
+                    </li>
+                    <li class="flex justify-between items-baseline">
+                        <div class="flex-1 pr-4">
+                            <span class="font-semibold">Pappardelle al Cinghiale</span> – wild boar ragu (seasonal)
+                            <span class="inline-block bg-[#1F6F4A] text-white text-xs px-2 py-0.5 rounded-full ml-2">🌾 GF</span>
+                        </div>
+                        <span class="whitespace-nowrap">€17.90</span>
+                    </li>
+                </ul>
+                <p class="text-sm mt-4 italic">All pasta dishes available with gluten‑free option (+€2)</p>
+            </div>
+
+            <!-- SALADS -->
+            <div class="mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="assets/Our-menu/insalata-caprese.webp" alt="Insalata Caprese – fresh tomato, mozzarella, basil" class="w-24 h-24 object-cover border-2 border-stone-200 transition-transform duration-300 hover:scale-110 hover:shadow-lg">
+                        <div class="italian-flag-strip">
+                            <div class="flag-green"></div>
+                            <div class="flag-white"></div>
+                            <div class="flag-red"></div>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="font-serif text-3xl font-semibold text-[#B22222] border-b-2 border-[#B22222]/20 pb-2 mb-2">Salads</h2>
+                        <p class="text-[#1C1A18]/80 text-sm leading-relaxed">Fresh, vibrant salads with a touch of Mediterranean flavour – perfect as a starter or light main.</p>
+                    </div>
+                </div>
+                <ul class="space-y-2">
+                    <li class="flex justify-between items-baseline">
+                        <div class="flex-1 pr-4">
+                            <span class="font-semibold">Caprese Salad</span> – tomato, bufala, basil, olive oil
+                            <span class="inline-block bg-[#1F6F4A] text-white text-xs px-2 py-0.5 rounded-full ml-2">🌿 Veg</span>
+                        </div>
+                        <span class="whitespace-nowrap">€11.90</span>
+                    </li>
+                    <li class="flex justify-between items-baseline">
+                        <span class="font-semibold">Tonno Salad – tuna, mixed leaves, olives, egg</span>
+                        <span>€13.90</span>
+                    </li>
+                    <li class="flex justify-between items-baseline">
+                        <span class="font-semibold">Pollo Salad – grilled chicken, lettuce, corn, tomato</span>
+                        <span>€12.90</span>
+                    </li>
+                    <li class="flex justify-between items-baseline">
+                        <span class="font-semibold">Chicken Avocado Salad</span>
+                        <span>€14.50</span>
+                    </li>
+                    <li class="flex justify-between items-baseline">
+                        <span class="font-semibold">Parma Salad – Parma ham, rocket, parmesan shavings</span>
+                        <span>€13.90</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- DESSERTS & GELATO -->
+            <div class="mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="assets/Our-menu/cannoli-siciliani.webp" alt="Indulge in traditional Italian desserts" class="w-24 h-24 object-cover border-2 border-stone-200 transition-transform duration-300 hover:scale-110 hover:shadow-lg">
+                        <div class="italian-flag-strip">
+                            <div class="flag-green"></div>
+                            <div class="flag-white"></div>
+                            <div class="flag-red"></div>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="font-serif text-3xl font-semibold text-[#B22222] border-b-2 border-[#B22222]/20 pb-2 mb-2">Dolci</h2>
+                        <p class="text-[#1C1A18]/80 text-sm leading-relaxed">Indulge in traditional Italian desserts, from tiramisù to creamy gelato.</p>
+                    </div>
+                </div>
+                <ul class="space-y-2">
+                    <li class="flex justify-between items-baseline"><span>Tiramisù classico</span><span>€7.50</span></li>
+                    <li class="flex justify-between items-baseline"><span>Gelato (pistacchio / stracciatella / cioccolato)</span><span>€4.90</span></li>
+                    <li class="flex justify-between items-baseline"><span>Affogato al Caffè (gelato + espresso)</span><span>€6.50</span></li>
+                    <li class="flex justify-between items-baseline"><span>Cannolo Siciliano</span><span>€5.90</span></li>
+                </ul>
+            </div>
+
+            <!-- BEVERAGES (Hot Drinks & Soft Drinks) -->
+            <div class="mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="assets/Our-menu/cappuccino.webp" alt="Cappuccino – creamy Italian espresso drink" class="w-24 h-24 object-cover border-2 border-stone-200 transition-transform duration-300 hover:scale-110 hover:shadow-lg">
+                        <div class="italian-flag-strip">
+                            <div class="flag-green"></div>
+                            <div class="flag-white"></div>
+                            <div class="flag-red"></div>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="font-serif text-3xl font-semibold text-[#B22222] border-b-2 border-[#B22222]/20 pb-2 mb-2">Hot Drinks</h2>
+                        <p class="text-[#1C1A18]/80 text-sm leading-relaxed">Authentic Italian coffee experience – espresso, cappuccino, and more made with love.</p>
+                    </div>
+                </div>
+                <ul class="space-y-1">
+                    <li class="flex justify-between items-baseline"><span>Espresso</span><span>€2.50</span></li>
+                    <li class="flex justify-between items-baseline"><span>Doppio Espresso</span><span>€3.00</span></li>
+                    <li class="flex justify-between items-baseline"><span>Black Coffee</span><span>€2.90</span></li>
+                    <li class="flex justify-between items-baseline"><span>Flat White / Latte / Cappuccino</span><span>€3.50</span></li>
+                    <li class="flex justify-between items-baseline"><span>Tea / Herbal Tea</span><span>€3.00</span></li>
+                    <li class="flex justify-between items-baseline"><span>Mocha / Hot Chocolate</span><span>€4.00</span></li>
+                </ul>
+            </div>
+
+            <!-- SOFT DRINKS & WINE -->
+            <div>
+                <!-- Soft Drinks -->
+                <div class="mb-12">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="relative overflow-hidden rounded-lg">
+                            <img src="assets/Our-menu/bestsoftdrink.webp" alt="Assorted Italian soft drinks" class="w-24 h-24 object-cover border-2 border-stone-200 transition-transform duration-300 hover:scale-110 hover:shadow-lg">
+                            <div class="italian-flag-strip">
+                                <div class="flag-green"></div>
+                                <div class="flag-white"></div>
+                                <div class="flag-red"></div>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h2 class="font-serif text-3xl font-semibold text-[#B22222] border-b-2 border-[#B22222]/20 pb-2 mb-2">Soft Drinks</h2>
+                            <p class="text-[#1C1A18]/80 text-sm leading-relaxed">Refreshing Italian soft drinks – perfect with any meal.</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-1">
+                        <li class="flex justify-between items-baseline"><span>Still / Sparkling Water (0.5L)</span><span>€2.90</span></li>
+                        <li class="flex justify-between items-baseline"><span>Coca Cola / Diet Coke</span><span>€3.20</span></li>
+                        <li class="flex justify-between items-baseline"><span>San Pellegrino (Lemon, Orange, Chinotto)</span><span>€3.90</span></li>
+                        <li class="flex justify-between items-baseline"><span>Iced Tea</span><span>€3.50</span></li>
+                        <li class="flex justify-between items-baseline"><span>Fruit Juice</span><span>€4.20</span></li>
+                    </ul>
+                </div>
+
+                <!-- Wine -->
+                <div class="mt-12">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="relative overflow-hidden rounded-lg">
+                            <img src="assets/Our-menu/wine.webp" alt="Italian red wine glass and bottle" class="w-24 h-24 object-cover border-2 border-stone-200 transition-transform duration-300 hover:scale-110 hover:shadow-lg">
+                            <div class="italian-flag-strip">
+                                <div class="flag-green"></div>
+                                <div class="flag-white"></div>
+                                <div class="flag-red"></div>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-serif text-2xl font-semibold text-[#B22222] border-b border-[#B22222]/20 pb-2 mb-2">Wine</h3>
+                            <p class="text-[#1C1A18]/80 text-sm leading-relaxed">Explore our curated selection of Italian wines, available by the glass or bottle.</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-1">
+                        <li class="flex justify-between items-baseline"><span>Glass of Italian red/white</span><span>€7.50</span></li>
+                        <li class="flex justify-between items-baseline"><span>House wine (bottle)</span><span>€22.00</span></li>
+                        <li class="flex justify-between items-baseline"><span>Prosecco (glass)</span><span>€7.00</span></li>
+                    </ul>
+                    <p class="text-sm mt-4 italic">Ask our staff for the full wine list or download the wine menu above.</p>
+                </div>
+            </div>
+
+        </div> <!-- end grid -->
+
+        <!-- BEST SELLERS SECTION -->
+        <div class="mt-12 mb-16 p-8 bg-white rounded-2xl border border-stone-200 shadow-sm">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="text-3xl">⭐🔥</span>
+                <h2 class="font-serif text-4xl font-bold text-[#B22222]">Best Sellers</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="space-y-6">
+                    <div class="flex justify-between items-baseline">
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-lg">Carbonara al Tartufo</h3>
+                            <p class="text-[#5a413d] text-sm">Silky egg-based carbonara with pecorino and black truffle shavings. 🍝✨</p>
+                        </div>
+                        <span class="font-bold ml-4">€18.90</span>
+                    </div>
+                    <div class="flex justify-between items-baseline">
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-lg">Margherita Verace</h3>
+                            <p class="text-[#5a413d] text-sm">San Marzano tomatoes, buffalo mozzarella, fresh basil, EVO oil. 🍕🌿</p>
+                        </div>
+                        <span class="font-bold ml-4">€14.00</span>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex justify-between items-baseline">
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-lg">Ravioli Pasticciati</h3>
+                            <p class="text-[#5a413d] text-sm">Ravioli with pecorino and parmesan in a creamy carbonara sauce. 🥟🧀</p>
+                        </div>
+                        <span class="font-bold ml-4">€16.90</span>
+                    </div>
+                    <div class="flex justify-between items-baseline">
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-lg">Diavola Pizza</h3>
+                            <p class="text-[#5a413d] text-sm">Spicy salami, mozzarella, and red chilli – a fiery favourite. 🌶️🍕</p>
+                        </div>
+                        <span class="font-bold ml-4">€15.50</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8 text-sm text-[#5a413d] italic">Our most requested dishes – loved by our guests!</div>
+        </div>
+
+<!-- Allergens note -->
+<div class="mt-16 mb-8 p-6 bg-white rounded-xl border border-stone-200 shadow-sm">
+  <p class="font-semibold mb-1 text-[#1b1c1c]">Allergens & Dietary Requirements</p>
+  <p class="text-[#5a413d] text-sm">
+    Got any allergies or dietary requirements? Just let our team know before you order — we're here to help. 
+    Some of our dishes may contain ingredients like gluten, eggs, fish, milk, soy, or nuts. 
+    If you'd like more details, feel free to ask — we're always happy to guide you. 🤗
+  </p>
+</div>
+
+<!-- Menu disclaimers -->
+<div class="text-center text-xs text-[#5a413d] mt-6 mb-8 space-y-1">
+  <p>✔ Please note that prices might be subject to change;</p>
+  <p>✔ The Menu was last updated on May 2026;</p>
+  <p>✔ Ask our friendly staff for daily specials;</p>
+</div>
+</main>
+
+    <!-- CTA Section -->
+    <section class="bg-[#B22222] mt-16">
+        <div class="max-w-3xl mx-auto px-6 py-16 md:py-20 text-center">
+            <h2 class="font-serif text-3xl md:text-4xl font-semibold text-white mb-6">Craving Something Delicious?</h2>
+            <p class="text-white/90 text-lg mb-8">
+Book your table now and enjoy authentic Italian dishes in a warm, welcoming atmosphere. Whether it’s a relaxed lunch, a romantic dinner, or time spent with friends, we look forward to welcoming you.</p>
+            <a href="dine-with-us.html" class="inline-block bg-white text-[#B22222] text-base font-bold uppercase tracking-wide py-4 px-12 rounded-full hover:bg-stone-100 transition-all shadow-lg">Reserve Your Spot</a>
+        </div>
+    </section>
+
+    <!-- Footer (same as homepage) -->
+    <footer class="bg-[#1C1A18] text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Main Footer Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12 items-start">
+                <!-- Brand Section -->
+                <div class="col-span-1">
+                    <img src="assets/homepage/logo-doppiozerocafe.png" alt="Doppio Zero Cafe"
+                        class="h-14 w-auto mb-6 brightness-0 invert opacity-90">
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+                        Authentic Italian dishes, handmade with love. We can't wait to welcome you to Doppio Zero Cafe, the heart of
+                        Italy in Dublin.
+                    </p>
+                </div>
+
+                <!-- Opening Hours -->
+                <div class="col-span-1">
+                    <h3 class="font-serif text-lg font-semibold mb-5 text-white tracking-wide uppercase">Opening Hours</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>Mon – Fri: <span class="text-white font-medium">07:30 – 17:30</span></li>
+                        <li>Sat: <span class="text-white font-medium">10:30 – 17:30</span></li>
+                        <li>Sun: <span class="text-white font-medium">Closed</span></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-span-1">
+                    <h3 class="font-serif text-lg font-semibold mb-5 text-white tracking-wide uppercase">Contact Us</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        📍 4A Abbey Street Upper, Dublin 1<br>
+                        📞 <a href="tel:0876621135" class="hover:text-white transition-colors">0876621135</a><br>
+                        ✉️ <a href="mailto:info@doppiozerocafe.ie" class="hover:text-white transition-colors">info@doppiozerocafe.ie</a>
+                    </p>
+                    <div class="mt-4">
+                        <a href="https://wa.me/353876621135?text=Hello%2C%20I%20would%20like%20to%20make%20a%20booking%20at%20Doppio%20Zero%20Cafe"
+                            target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 bg-green-500 text-white text-sm font-bold uppercase tracking-wide py-3 px-5 rounded-full transition-all hover:bg-green-600 shadow-md">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="col-span-1">
+                    <h3 class="font-serif text-lg font-semibold mb-5 text-white tracking-wide uppercase">Follow Us</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-[#1877F2] hover:scale-110 transition-all duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#E4405F] hover:scale-110 transition-all duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.266-.058 1.646-.07 4.85-.07zM12 0C8.741 0 8.332.014 7.052.072 5.738.13 4.525.344 3.47 1.399 2.415 2.454 2.201 3.667 2.143 4.981c-.058 1.28-.072 1.689-.072 4.948s.014 3.668.072 4.948c.058 1.314.272 2.527 1.327 3.582 1.055 1.055 2.268 1.269 3.582 1.327 1.28.058 1.689.072 4.948.072s3.668-.014 4.948-.072c1.314-.058 2.527-.272 3.582-1.327 1.055-1.055 1.269-2.268 1.327-3.582.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.058-1.314-.272-2.527-1.327-3.582-1.055-1.055-2.268-1.269-3.582-1.327C15.668.014 15.259 0 12 0z" />
+                                <circle cx="12" cy="12" r="3.5" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#1DA1F2] hover:scale-110 transition-all duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0021.583-11.744c0-.21-.003-.42-.01-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom mt-16 pt-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-3 text-[8px] md:text-xs">
+    <div class="text-gray-400">
+        © 2026 Doppio Zero Cafe. All rights reserved.
+    </div>
+    <div class="text-gray-400 text-center">
+        <span class="italic">Website designed by Davide Lucci</span>.
+    </div>
+    <div class="flex items-center gap-2 md:gap-6 text-gray-400">
+        <a href="/privacy-policy.html" class="hover:underline">Privacy Policy</a>
+        <span class="hidden md:inline">•</span>
+        <a href="/terms.html" class="hover:underline">Terms of Use</a>
+    </div>
+</div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!mobileMenuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Navbar scroll effect
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.remove('nav-transparent');
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.add('nav-transparent');
+                nav.classList.remove('nav-scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>

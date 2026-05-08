@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Doppio Zero Cafe – Authentic Italian in Dublin</title>
+    <meta name="description"
+        content="Browse the gallery of Doppio Zero Cafe. Experience our authentic Italian food, warm atmosphere, and real moments in Dublin city centre.">
+    <meta name="keywords" content="Italian restaurant Dublin, Doppio Zero Cafe gallery, Italian food photos Dublin, cafe atmosphere Dublin">
+    <meta name="author" content="Doppio Zero Cafe">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.doppiozerocafe.ie/gallery.html">
+    <meta property="og:title" content="Gallery | Doppio Zero Cafe – Authentic Italian in Dublin">
+    <meta property="og:description" content="Browse the gallery of Doppio Zero Cafe. Experience our authentic Italian food, warm atmosphere, and real moments in Dublin city centre.">
+    <meta property="og:image" content="https://www.doppiozerocafe.ie/assets/gallery/gallery-hero.webp">
+    <meta property="og:locale" content="en_IE">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gallery | Doppio Zero Cafe – Authentic Italian in Dublin">
+    <meta name="twitter:description" content="Browse the gallery of Doppio Zero Cafe. Experience our authentic Italian food, warm atmosphere, and real moments in Dublin city centre.">
+    <meta name="twitter:image" content="https://www.doppiozerocafe.ie/assets/gallery/gallery-hero.webp">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.doppiozerocafe.ie/gallery.html">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Doppio Zero Cafe",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4A Abbey Street Upper",
+        "addressLocality": "Dublin",
+        "addressCountry": "IE"
+      },
+      "telephone": "+353876621135",
+      "servesCuisine": "Italian",
+      "url": "https://www.doppiozerocafe.ie"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Be+Vietnam+Pro:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+    <style>
+        /* CSS Variables (source of truth for brand colors) */
+        :root {
+            --primary: #B22222;
+            --primary-hover: #921c1c;
+            --accent: #F5A623;
+            --secondary: #1F6F4A;
+            --on-surface: #1C1A18;
+            --background: #F7F3EE;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Body & Typography using CSS variables */
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: var(--background);
+            color: var(--on-surface);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Noto Serif', serif;
+            color: var(--primary);
+        }
+
+        /* Navbar scroll effect classes */
+        .navbar-custom {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-transparent {
+            background-color: transparent !important;
+            backdrop-filter: none !important;
+            border-bottom-color: transparent !important;
+            box-shadow: none !important;
+        }
+
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.9) !important;
+            backdrop-filter: blur(12px) !important;
+            border-bottom: 1px solid #f1f5f9 !important;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+        }
+
+        /* Custom scrollbar using CSS variables */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--background);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-hover);
+        }
+
+        /* Nav hover effects using CSS variables */
+        .nav-transparent .nav-link:hover,
+        .nav-scrolled .nav-link:hover {
+            background-color: var(--accent) !important;
+            color: var(--on-surface) !important;
+            border-radius: 6px;
+        }
+
+        /* Italian Visual Framing System */
+        .img-italian-frame {
+            position: relative;
+            overflow: hidden;
+            display: block;
+        }
+        .img-italian-frame.absolute {
+            position: absolute;
+        }
+
+        /* Lightbox CSS */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 0.5rem;
+            object-fit: contain;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        /* Hover scale effect */
+        .hover-scale {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Italian Identity Strip -->
+    <div class="tricolor-strip">
+        <div class="tricolor-green"></div>
+        <div class="tricolor-white"></div>
+        <div class="tricolor-red"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 border-b navbar-custom nav-transparent">
+        <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="inline-flex items-center">
+                <img src="assets/homepage/logo-doppiozerocafe.png" alt="Doppio Zero Cafe Restaurant in Dublin"
+                    class="h-12 w-auto object-contain">
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html"
+                    class="font-serif text-sm uppercase tracking-wide font-medium text-white hover:text-[#F5A623] transition-colors">Home</a>
+                <a href="our-menu.html"
+                    class="font-serif text-sm uppercase tracking-wide font-medium text-white hover:text-[#F5A623] transition-colors">Our
+                    Menu</a>
+                <a href="gallery.html"
+                    class="font-serif text-sm uppercase tracking-wide font-medium text-[#F5A623] transition-colors border-b-2 border-[#F5A623]">Gallery</a>
+                <a href="our-story.html"
+                    class="font-serif text-sm uppercase tracking-wide font-medium text-white hover:text-[#F5A623] transition-colors">Our
+                    Story</a>
+                <a href="dine-with-us.html"
+                    class="font-serif text-sm uppercase tracking-wide font-medium text-white hover:text-[#F5A623] transition-colors">Dine
+                    with us</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="dine-with-us.html"
+                    class="bg-[#B22222] text-white text-sm font-bold uppercase tracking-wide py-3 px-8 rounded-full transition-all hover:bg-[#921c1c] shadow-md">
+                    Book a Table
+                </a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-white p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-t border-stone-200 shadow-lg">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="index.html" class="font-serif text-sm uppercase tracking-wide font-medium text-[#1C1A18] hover:text-[#B22222] transition-colors py-2">Home</a>
+                <a href="our-menu.html" class="font-serif text-sm uppercase tracking-wide font-medium text-[#B22222] transition-colors py-2 border-b-2 border-[#B22222]">Our Menu</a>
+                <a href="gallery.html" class="font-serif text-sm uppercase tracking-wide font-medium text-[#1C1A18] hover:text-[#B22222] transition-colors py-2">Gallery</a>
+                <a href="our-story.html" class="font-serif text-sm uppercase tracking-wide font-medium text-[#1C1A18] hover:text-[#B22222] transition-colors py-2">Our Story</a>
+                <a href="dine-with-us.html" class="font-serif text-sm uppercase tracking-wide font-medium text-[#1C1A18] hover:text-[#B22222] transition-colors py-2">Dine with us</a>
+                <div class="flex flex-col space-y-3 pt-4 border-t border-stone-200">
+                    <a href="dine-with-us.html" class="bg-[#B22222] text-white text-sm font-bold uppercase tracking-wide py-3 px-6 rounded-full text-center transition-all hover:bg-[#921c1c]">Book a Table</a>
+                    <a href="https://wa.me/353876621135?text=Hello%2C%20I%20would%20like%20to%20make%20a%20booking%20at%20Doppio%20Zero%20Cafe" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white text-sm font-bold uppercase tracking-wide py-3 px-6 rounded-full text-center transition-all hover:bg-green-600 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-[70vh] min-h-[600px] flex items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <img src="assets/Gallery/Atmosphere/doppio-zero-cafe-dublin-italian-restaurant-exterior-night.jpg.webp" alt="Doppio Zero Cafe exterior at night in Dublin with warm lighting and guests inside"
+                 class="w-full h-full object-cover" loading="eager">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="italian-flag-strip">
+                <div class="flag-green"></div>
+                <div class="flag-white"></div>
+                <div class="flag-red"></div>
+            </div>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto px-6 pt-32 md:pt-40">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight leading-tight">
+                <span style="color:#F5A623;">A Glimpse</span> of Italy in Dublin
+            </h1>
+            <p class="text-[#F5A623] text-xl md:text-2xl mb-6 italic">
+             Real moments. Real food. Real Italian atmosphere.
+        </p>
+            <p class="text-white/90 text-base md:text-lg max-w-2xl mx-auto mt-4 text-center">
+                A visual journey through our kitchen, flavours, and the warm atmosphere of Doppio Zero Cafe.
+            </p>
+        </div>
+    </header>
+
+    <!-- Gallery Content -->
+    <main class="max-w-7xl mx-auto px-6 py-16">
+
+        <!-- 1. Pasta Main Dishes -->
+        <section class="mb-20">
+            <h2 class="font-serif text-3xl md:text-4xl font-semibold text-[#1b1c1c] text-center mt-16 mb-4">Pasta Main Dishes</h2>
+            <p class="text-[#5a413d] text-base max-w-2xl mx-auto text-center mb-8">
+                Discover our handcrafted pasta dishes, prepared daily using authentic Italian recipes and the finest seasonal ingredients.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-min gap-6">
+                <div class="group">
+                    <div class="overflow-hidden rounded-xl cursor-pointer">
+                        <img src="assets/gallery/food/linguine-alla-aragosta.webp" alt="Linguine alla Aragosta"
+                             class="w-full h-auto object-cover rounded-xl transition-transform duration-300 hover:scale-105"
+                             onclick="openLightbox(this.src)">
+                    </div>
+                    <p class="text-center text-[#5a413d] text-sm italic mt-2">Linguine alla Aragosta</p>
+                </div>
+                <div class="group">
+                    <div class="overflow-hidden rounded-xl cursor-pointer">
+                        <img src="assets/gallery/food/gnocchi-with-fonduta.webp" alt="Gnocchi with Fonduta"
+                             class="w-full h-auto object-cover rounded-xl transition-transform duration-300 hover:scale-105"
+                             onclick="openLightbox(this.src)">
+                    </div>
+                    <p class="text-center text-[#5a413d] text-sm italic mt-2">Gnocchi with Fonduta</p>
+                </div>
+                <div class="group">
+                    <div class="overflow-hidden rounded-xl cursor-pointer">
+                        <img src="assets/gallery/food/risotto-seafood.webp" alt="Risotto Seafood"
+                             class="w-full h-auto object-cover rounded-xl transition-transform duration-300 hover:scale-105"
+                             onclick="openLightbox(this.src)">
+                    </div>
+                    <p class="text-center text-[#5a413d] text-sm italic mt-2">Risotto Seafood</p>
+                </div>
+                       
+        </section>
+
+        <!-- 2. Pizza & Pinsa -->
+        <section class="mb-20">
+            <h2 class="font-serif text-3xl md:text-4xl font-semibold text-[#1b1c1c] text-center mt-16 mb-4">Pizza & Pinsa</h2>
+            <p class="text-[#5a413d] text-base max-w-2xl mx-auto text-center mb-8">
+                Experience our traditional pizzas and Roman pinsas, baked to perfection with premium toppings and love.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-min gap-6">
+                <div class="group">
+                    <div class="overflow-hidden rounded-xl cursor-pointer">
+                        <img src="assets/gallery/food/pizza-al-portafoglio.webp" alt="Pizza al Portafoglio"
+                             class="w-full h-auto object-cover rounded-xl transition-transform duration-300 hover:scale-105"
+                             onclick="openLightbox(this.src)">
+                    </div>
+                    <p class="text-center text-[#5a413d] text-sm italic mt-2">Pizza al Portafoglio</p>
+                </div>
+                <div class="group">
+                    <div class="overflow-hidden rounded-xl cursor-pointer">
+                        <img src="assets/gallery/food/pinza-romana-con-mozzarella-di-bufola.webp" alt="Pinza Romana con Mozzarella di Bufola"
+                             class="w-full h-auto object-cover rounded-xl transition-transform duration-300 hover:scale-105"
+                             onclick="openLightbox(this.src)">
+                    </div>
+                    <p class="text-center text-[#5a413d] text-sm italic mt-2">Pinza Romana con Mozzarella di Bufola</p>
+                </div>
+                <div class="group">
+                    <div class="overflow-hidden rounded-xl cursor-pointer">
+                        <img src="assets/gallery/food/pinza-alla-romana-con-mozzarella.webp" alt="Pinza alla Romana con Mozzarella"
+                             class="w-full h-auto object-cover rounded-xl transition-transform duration-300 hover:scale-105"
+                             onclick="openLightbox(this.src)">
+                    </div>
+                    <p class="text-center text-[#5a413d] text-sm italic mt-2">Pinza alla Romana con Mozzarella</p>
+                </div>
+
+                <!-- 3. Desserts -->
+
+               </section>
+            <section class="mb-20">
+            <h2 class="font-serif text-3xl md:text-4xl font-semibold text-[#1b1c1c] text-center mt-16 mb-4">Desserts</h2>
+            <p class="text-[#5a413d] text-base max-w-2xl mx-auto text-center mb-8">
+               Indulge in our handcrafted desserts, made with premium ingredients and a touch of Italian sweetness, crafted to delight every bite.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-min gap-6">
+                <div class="group">
+                    <div class="overflow-hidden rounded-xl cursor-pointer">
+                        <img src="assets/gallery/food/brioche-alla-crema.webp" alt="Brioche alla Crema Fresca"
+                             class="w-full h-auto object-cover rounded-xl transition-transform duration-300 hover:scale-105"
+                             onclick="openLightbox(this.src)">
+                    </div>
+                    <p class="text-center text-[#5a413d] text-sm italic mt-2">Brioche Alla Crema Fresca</p>
+                </div>
+                <div class="group">
+                    <div class="overflow-hidden rounded-xl cursor-pointer">
+                        <img src="assets/gallery/food/cannoli-siciliani-alla-crema.webp" alt="Cannoli alla Siciliana"
+                             class="w-full h-auto object-cover rounded-xl transition-transform duration-300 hover:scale-105"
+                             onclick="openLightbox(this.src)">
+                    </div>
+                    <p class="text-center text-[#5a413d] text-sm italic mt-2">Cannoli alla Siciliana</p>
+                </div>
+                <div class="group">
+                    <div class="overflow-hidden rounded-xl cursor-pointer">
+                        <img src="assets/gallery/food/paste-mix-berries.webp" alt="Pasterelle Mix Berries"
+                             class="w-full h-auto object-cover rounded-xl transition-transform duration-300 hover:scale-105"
+                             onclick="openLightbox(this.src)">
+                    </div>
+                    <p class="text-center text-[#5a413d] text-sm italic mt-2">Pasterelle Mix Berries</p>
+                </div>
+        
+        </section>
+
+<!-- 4. Hot Drinks -->
+        <section class="mb-20">
+            <h2 class="font-serif text-3xl md:text-4xl font-semibold text-[#1b1c1c] text-center mt-16 mb-4">Hot Drinks</h2>
+            <p class="text-[#5a413d] text-base max-w-2xl mx-auto text-center mb-8">
+                Savor our selection of expertly crafted hot drinks, from rich Italian espresso to creamy cappuccinos, perfect for a relaxing finish to your meal.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-min gap-6">
+                <div class="group">
+                    <div class="overflow-hidden rounded-xl cursor-pointer">
+                        <img src="assets/gallery/hot drinks/capuccino-italiano-pick-and-go.webp" alt="Takeaway Italian cappuccino in a to-go cup, freshly prepared coffee to enjoy on the move"
+                             class="w-full h-auto object-cover rounded-xl transition-transform duration-300 hover:scale-105"
+                             onclick="openLightbox(this.src)">
+                    </div>
+                    <p class="text-center text-[#5a413d] text-sm italic mt-2"> A freshly made Italian cappuccino served to go, perfect for enjoying a smooth and rich coffee experience on the move.</p>
+                </div>
+                <div class="group">
+                    <div class="overflow-hidden rounded-xl cursor-pointer">
+                        <img src="assets/gallery/hot drinks/caffe-espresso.webp" alt="Authentic Italian espresso coffee served in a small cup, rich and freshly brewed traditional café experience"
+                             class="w-full h-auto object-cover rounded-xl transition-transform duration-300 hover:scale-105"
+                             onclick="openLightbox(this.src)">
+                    </div>
+                    <p class="text-center text-[#5a413d] text-sm italic mt-2">A true Italian espresso, crafted with precision and intensity, delivering a rich aroma and bold flavour in every sip.</p>
+                </div>
+                <div class="group">
+                    <div class="overflow-hidden rounded-xl cursor-pointer">
+                        <img src="assets/gallery/hot drinks/cappuccino-italiano.webp" alt="A fresh Italian cappuccino served in a ceramic cup inside a cozy restaurant setting."
+                             class="w-full h-auto object-cover rounded-xl transition-transform duration-300 hover:scale-105"
+                             onclick="openLightbox(this.src)">
+                    </div>
+                    <p class="text-center text-[#5a413d] text-sm italic mt-2">A tasty Italian cappuccino served at Doppio Zero Cafe', offering a smooth, creamy coffee experience to enjoy in-house.</p>
+                </div>  
+        </section>
+ 
+        <!-- 5. Ambience -->
+<section class="mb-20">
+    <h2 class="font-serif text-3xl md:text-4xl font-semibold text-[#1b1c1c] text-center mt-16 mb-4">
+        Ambience
+    </h2>
+
+    <p class="text-[#5a413d] text-base max-w-2xl mx-auto text-center mb-8">
+        Take a look inside Doppio Zero Cafe, where our welcoming environment invites you to relax and enjoy.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Item 1 -->
+        <figure class="group">
+            <div class="overflow-hidden rounded-xl cursor-pointer">
+                <img
+                    src="assets/gallery/atmosphere/doppio-zero-cafe-dublin-dinner-experience.webp"
+                    alt="Warm interior of Doppio Zero Cafe in Dublin"
+                    class="w-full h-auto object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                    onclick="openLightbox(this.src)"
+                >
+            </div>
+            <figcaption class="text-center text-[#5a413d] text-sm italic mt-2">
+                Dinner at Doppio Zero Café in Dublin offers a cozy Italian dining experience wrapped in a warm, modern atmosphere.
+            </figcaption>
+        </figure>
+
+        <!-- Item 2 -->
+        <figure class="group">
+            <div class="overflow-hidden rounded-xl cursor-pointer">
+                <img
+                    src="assets/gallery/atmosphere/inside-doppio-zero-cafe-restaurant-in-dublin.webp"
+                    alt="Interior dining area of Doppio Zero Cafe in Dublin"
+                    class="w-full h-auto object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                    onclick="openLightbox(this.src)"
+                >
+            </div>
+            <figcaption class="text-center text-[#5a413d] text-sm italic mt-2">
+                Step inside and discover a stylish yet intimate restaurant where contemporary design meets authentic Italian charm.
+            </figcaption>
+        </figure>
+
+        <!-- Item 3 -->
+        <figure class="group">
+            <div class="overflow-hidden rounded-xl cursor-pointer">
+                <img
+                    src="assets/gallery/atmosphere/doppio-zero-cafe-dublin-friends-dining-coffee-bar.webp"
+                    alt="Friends dining and enjoying espresso at Doppio Zero Cafe in Dublin"
+                    class="w-full h-auto object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                    onclick="openLightbox(this.src)"
+                >
+            </div>
+            <figcaption class="text-center text-[#5a413d] text-sm italic mt-2">
+                Friends share relaxed moments over dinner, finishing the evening with rich, aromatic Italian espresso.
+            </figcaption>
+        </figure>
+
+    </div>
+</section>
+
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Enlarged gallery image">
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#1C1A18] text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Main Footer Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12 items-start">
+                <!-- Brand Section -->
+                <div class="col-span-1">
+                    <img src="assets/homepage/logo-doppiozerocafe.png" alt="Doppio Zero Cafe"
+                        class="h-14 w-auto mb-6 brightness-0 invert opacity-90">
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+                        Authentic Italian dishes, handmade with love. We can't wait to welcome you to Doppio Zero Cafe, the heart of Italy in Dublin.
+                    </p>
+                </div>
+
+                <!-- Opening Hours -->
+                <div class="col-span-1">
+                    <h3 class="font-serif text-lg font-semibold mb-5 text-white tracking-wide uppercase">Opening Hours</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>Mon – Fri: <span class="text-white font-medium">07:30 – 17:30</span></li>
+                        <li>Sat: <span class="text-white font-medium">10:30 – 17:30</span></li>
+                        <li>Sun: <span class="text-white font-medium">Closed</span></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-span-1">
+                    <h3 class="font-serif text-lg font-semibold mb-5 text-white tracking-wide uppercase">Contact Us</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        📍 4A Abbey Street Upper, Dublin 1<br>
+                        📞 <a href="tel:0876621135" class="hover:text-white transition-colors">0876621135</a><br>
+                        ✉️ <a href="mailto:info@doppiozerocafe.ie" class="hover:text-white transition-colors">info@doppiozerocafe.ie</a>
+                    </p>
+                    <div class="mt-4">
+                        <a href="https://wa.me/353876621135?text=Hello%2C%20I%20would%20like%20to%20make%20a%20booking%20at%20Doppio%20Zero%20Cafe"
+                            target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 bg-green-500 text-white text-sm font-bold uppercase tracking-wide py-3 px-5 rounded-full transition-all hover:bg-green-600 shadow-md">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="col-span-1">
+                    <h3 class="font-serif text-lg font-semibold mb-5 text-white tracking-wide uppercase">Follow Us</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-[#1877F2] hover:scale-110 transition-all duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#E4405F] hover:scale-110 transition-all duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.266-.058 1.646-.07 4.85-.07zM12 0C8.741 0 8.332.014 7.052.072 5.738.13 4.525.344 3.47 1.399 2.415 2.454 2.201 3.667 2.143 4.981c-.058 1.28-.072 1.689-.072 4.948s.014 3.668.072 4.948c.058 1.314.272 2.527 1.327 3.582 1.055 1.055 2.268 1.269 3.582 1.327 1.28.058 1.689.072 4.948.072s3.668-.014 4.948-.072c1.314-.058 2.527-.272 3.582-1.327 1.055-1.055 1.269-2.268 1.327-3.582.058-1.28.072-1.689.072 4.948s-.014 3.668-.072 4.948c-.058 1.314-.272 2.527-1.327 3.582-1.055 1.055-2.268 1.269-3.582 1.327C15.668.014 15.259 0 12 0z" />
+                                <circle cx="12" cy="12" r="3.5" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#1DA1F2] hover:scale-110 transition-all duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0021.583-11.744c0-.21-.003-.42-.01-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom mt-16 pt-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-3 text-[8px] md:text-xs">
+                <div class="text-gray-400">
+                    © 2026 Doppio Zero Cafe. All rights reserved.
+                </div>
+                <div class="text-gray-400 text-center">
+                    <span class="italic">Website designed by Davide Lucci</span>.
+                </div>
+                <div class="flex items-center gap-2 md:gap-6 text-gray-400">
+                    <a href="/privacy-policy.html" class="hover:underline">Privacy Policy</a>
+                    <span class="hidden md:inline">•</span>
+                    <a href="/terms.html" class="hover:underline">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Overlay -->
+    <div id="lightbox-overlay" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 hidden items-center justify-center cursor-pointer transition-all duration-300">
+        <div class="relative max-w-[90vw] max-h-[90vh] cursor-default" onclick="event.stopPropagation()">
+            <button id="lightbox-close" class="absolute -top-10 right-0 text-white text-4xl font-bold hover:text-[#F5A623] transition">&times;</button>
+            <img id="lightbox-image" src="" alt="Enlarged view" class="max-w-full max-h-[85vh] w-auto h-auto rounded-xl shadow-2xl border-2 border-white/20">
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mobileMenuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        }
+
+        // Navbar scroll effect
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.remove('nav-transparent');
+                nav.classList.add('nav-scrolled');
+                // Also update nav link colors
+                nav.querySelectorAll('a:not([href*="dine-with-us"])').forEach(link => {
+                    if (!link.closest('#mobileMenu')) {
+                        link.classList.remove('text-white');
+                        link.classList.add('text-[#1C1A18]');
+                    }
+                });
+            } else {
+                nav.classList.add('nav-transparent');
+                nav.classList.remove('nav-scrolled');
+                // Reset nav link colors
+                nav.querySelectorAll('a:not([href*="dine-with-us"])').forEach(link => {
+                    if (!link.closest('#mobileMenu')) {
+                        link.classList.add('text-white');
+                        link.classList.remove('text-[#1C1A18]');
+                    }
+                });
+            }
+        });
+
+        // Lightbox functions
+        const lightboxOverlay = document.getElementById('lightbox-overlay');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        function openLightbox(src) {
+            if (lightboxImage && lightboxOverlay) {
+                lightboxImage.src = src;
+                lightboxOverlay.classList.remove('hidden');
+                lightboxOverlay.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeLightbox() {
+            if (lightboxOverlay) {
+                lightboxOverlay.classList.remove('flex');
+                lightboxOverlay.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+                setTimeout(() => {
+                    if (lightboxImage) lightboxImage.src = '';
+                }, 300);
+            }
+        }
+
+        if (lightboxClose) {
+            lightboxClose.addEventListener('click', closeLightbox);
+        }
+        if (lightboxOverlay) {
+            lightboxOverlay.addEventListener('click', closeLightbox);
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && lightboxOverlay && !lightboxOverlay.classList.contains('hidden')) {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+
+</html>

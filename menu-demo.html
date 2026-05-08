@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, print-scale:100%">
+  <title>Doppio Zero – Menu Demo</title>
+  <style>
+    /* Reset and print styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #f7f3ef;
+      font-family: 'Times New Roman', 'Georgia', serif;
+      padding: 2rem;
+    }
+    /* main menu container – A4 friendly */
+    .menu {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #fffef7;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+    }
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .menu {
+        box-shadow: none;
+        padding: 0.2in;
+        max-width: 100%;
+      }
+      .print-break {
+        page-break-before: avoid;
+        break-inside: avoid;
+      }
+      h2 {
+        break-after: avoid;
+      }
+    }
+    /* typography */
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      text-align: center;
+      font-weight: 700;
+      border-bottom: 2px solid #c62828;
+      display: inline-block;
+      width: auto;
+      margin: 0 auto 0.5rem;
+      padding-bottom: 0.25rem;
+    }
+    .subhead {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #b5651e;
+      text-transform: uppercase;
+      margin-bottom: 1.8rem;
+      letter-spacing: 1px;
+    }
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      border-left: 6px solid #c62828;
+      padding-left: 12px;
+      margin: 1.5rem 0 1rem;
+      color: #2c2c2c;
+    }
+    .two-col {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .col {
+      flex: 1;
+      min-width: 250px;
+    }
+    .menu-item {
+      margin-bottom: 0.85rem;
+      break-inside: avoid;
+    }
+    .item-title {
+      font-weight: 700;
+      font-size: 1.02rem;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dotted #ccc;
+      padding-bottom: 0.2rem;
+      margin-bottom: 0.2rem;
+    }
+    .item-desc {
+      font-size: 0.8rem;
+      color: #5a5a5a;
+      line-height: 1.3;
+      margin-top: 0.2rem;
+    }
+    .price {
+      font-weight: 600;
+      color: #b5522b;
+      white-space: nowrap;
+      margin-left: 0.5rem;
+    }
+    .badge {
+      font-size: 0.7rem;
+      background: #f0ede8;
+      display: inline-block;
+      padding: 0.1rem 0.4rem;
+      border-radius: 12px;
+      margin-left: 0.4rem;
+    }
+    hr {
+      margin: 1.2rem 0;
+      border: 0;
+      height: 1px;
+      background: #e0d6cc;
+    }
+    .footer-note {
+      text-align: center;
+      font-size: 0.7rem;
+      margin-top: 2.2rem;
+      color: #7e6b55;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+    }
+    .allergens {
+      font-size: 0.7rem;
+      background: #faf7f0;
+      padding: 0.8rem;
+      border-radius: 10px;
+      margin-top: 1.5rem;
+    }
+    @media (max-width: 700px) {
+      .menu { padding: 1rem; }
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="menu">
+  <div style="text-align: center;">
+    <h1>DOPPIO ZERO</h1>
+    <div class="subhead">Italian Food &amp; Wines · Fresh &amp; Authentic</div>
+  </div>
+
+  <!-- two columns layout for most categories -->
+  <div class="two-col">
+    <div class="col">
+      <!-- STARTERS -->
+      <h2>Antipasti · Starters</h2>
+      <div class="menu-item"><div class="item-title"><span>Burrata &amp; Pomodori D'Attirno</span><span class="price">€12.90</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Crostino Aglio Olio Mozzarella</span><span class="price">€8.90</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Olive Taggiasche &amp; Taralli</span><span class="price">€6.50</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Tagliere Misto (Italian meat &amp; cheese)</span><span class="price">€14.90</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Bruschetta</span><span class="price">€7.50</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Soup of the day</span><span class="price">€8.50</span></div></div>
+      <div class="item-desc">*Served with bread &amp; extra virgin olive oil</div>
+
+      <!-- PANINI (served with soup or salad) -->
+      <h2>Panini</h2>
+      <div class="item-desc" style="margin-bottom: 10px;">All served with soup or salad – €14.90</div>
+      <div class="menu-item"><div class="item-title"><span>Batterini tomato, bufala mozzarella & fresh basil</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Roast ham, scamorza cheese & mushrooms</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Parma ham D.O.P., mozzarella & rocket salad</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Grilled chicken, pesto, chilli, cheese & rocket</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Ventricina salami, scamorza & rocket salad</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Parma ham D.O.P., bufala mozzarella, rocket</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Mortadella, pistacchio pesto, burrata & rocket</span></div></div>
+
+      <!-- PINZA ROMANA -->
+      <h2>Pinza Romana (oval shape)</h2>
+      <div class="menu-item"><div class="item-title"><span>Buffala – tomato, bufala mozzarella, basil</span><span class="price">€13.90</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Picciante – salame piccante, tomato, mozzarella</span><span class="price">€14.90</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Modena – roast ham, mushrooms, tomato, mozzarella</span><span class="price">€14.90</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Vegetariana – tomato, mushrooms, olives, aubergine, mozzarella</span><span class="price">€13.90</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Mortadella – burrata, pistacchio, rucola</span><span class="price">€15.90</span></div></div>
+      <div class="item-desc">Daily specials available on the board</div>
+    </div>
+
+    <div class="col">
+      <!-- PASTA -->
+      <h2>Pasta fatta in casa</h2>
+      <div class="menu-item"><div class="item-title"><span>Gnocchetti, tomato sauce, burrata mozzarella, basil</span><span class="price">€16.90</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Linguine with brotate pistacchio pesto</span><span class="price">€16.90</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Cacio e Pepe (Locatelli sauce, homemade salsa pomodoro)</span><span class="price">€14.90</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Cacio e Pepe with Calabrian red wine & salsa pomodoro</span><span class="price">€15.90</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Calzone & truffle sauce – Cacio e Pepe style</span><span class="price">€18.90</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Mozzarella & peas in creamy sauce</span><span class="price">€15.90</span></div></div>
+
+      <!-- SALADS -->
+      <h2>Insalate · Salads</h2>
+      <div class="menu-item"><div class="item-title"><span>Caprese Salad (mozzarella, tomatoes, basil)</span><span class="price">€11.90</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Tonno Salad (tuna, olives, egg, lettuce)</span><span class="price">€13.90</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Pollo Salad (grilled chicken, mixed leaves)</span><span class="price">€12.90</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Chicken Avocado Salad</span><span class="price">€14.50</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Parma Salad (Parma ham, rocket, parmesan)</span><span class="price">€13.90</span></div></div>
+
+      <!-- DOLCI -->
+      <h2>Dolci · Desserts</h2>
+      <div class="menu-item"><div class="item-title"><span>Tiramisù classico</span><span class="price">€7.50</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Pistacchio gelato</span><span class="price">€4.90</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Affogato al Caffè (gelato + espresso)</span><span class="price">€6.50</span></div></div>
+
+      <!-- HOT DRINKS -->
+      <h2>Caffetteria · Hot drinks</h2>
+      <div class="two-col" style="gap: 0.5rem;">
+        <div class="col"><div class="menu-item"><span>Espresso</span><span class="price">€2.50</span></div>
+        <div class="menu-item"><span>Doppio Espresso</span><span class="price">€3.00</span></div>
+        <div class="menu-item"><span>Black coffee</span><span class="price">€2.90</span></div>
+        <div class="menu-item"><span>Flat White / Latte</span><span class="price">€3.50</span></div></div>
+        <div class="col"><div class="menu-item"><span>Cappuccino</span><span class="price">€3.50</span></div>
+        <div class="menu-item"><span>Tea / Herbal tea</span><span class="price">€3.00</span></div>
+        <div class="menu-item"><span>Mocha / Hot Chocolate</span><span class="price">€4.00</span></div>
+        <div class="item-desc">*extra shot / milk alternative / syrup +€0.50</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEVERAGES TABLE style -->
+  <h2>Bevande · Soft drinks & Water</h2>
+  <div class="two-col">
+    <div class="col">
+      <div class="menu-item"><div class="item-title"><span>Still water (0.5L)</span><span class="price">€2.90</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Sparkling water</span><span class="price">€2.90</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Coca Cola / Diet Coke</span><span class="price">€3.20</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>San Pellegrino Limone</span><span class="price">€3.90</span></div></div>
+    </div>
+    <div class="col">
+      <div class="menu-item"><div class="item-title"><span>San Pellegrino Aranciata / Chinotto</span><span class="price">€3.90</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Iced Tea</span><span class="price">€3.50</span></div></div>
+      <div class="menu-item"><div class="item-title"><span>Fruit juice</span><span class="price">€4.20</span></div></div>
+    </div>
+  </div>
+
+  <h2>Vini · Wine</h2>
+  <div class="menu-item"><div class="item-title"><span>Glass of Italian red or white (doc)</span><span class="price">€7.50</span></div></div>
+  <div class="menu-item"><div class="item-title"><span>House wine (bottle)</span><span class="price">€22.00</span></div></div>
+  <div class="menu-item"><div class="item-title"><span>Prosecco glass</span><span class="price">€7.00</span></div></div>
+  <div class="item-desc">Ask for our premium wine list</div>
+
+  <!-- allergens note -->
+  <div class="allergens">
+    <strong>Allergens & dietary requirements</strong><br>
+    Please inform our staff about any allergies or dietary needs. Some dishes contain: gluten (1), eggs (3), fish (4), milk (7), soy (12), peanuts (13). Ask us for a full allergen list – we're happy to help.
+  </div>
+
+  <div class="footer-note">
+    Doppio Zero · 4A Abbey Street Upper, Dublin 1 · Tel (087) 662 1135<br>
+    All prices include VAT. Service not included.
+  </div>
+</div>
+</body>
+</html>
